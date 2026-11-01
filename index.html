@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Compass AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="authScreen" class="auth-shell">
+    <section class="brand-panel">
+      <div class="brand"><span class="brand-mark">✦</span> Career Compass <span class="ai-tag">AI</span></div>
+      <div class="brand-copy">
+        <p class="eyebrow">YOUR FUTURE, YOUR DIRECTION</p>
+        <h1>Find a career<br><span>that fits you.</span></h1>
+        <p class="brand-description">Discover your strengths, explore career paths, and take your next step with confidence.</p>
+        <div class="feature-pills"><span>✦ Discover strengths</span><span>↗ Explore careers</span><span>◎ Build a roadmap</span></div>
+      </div>
+      <div class="brand-footer">A youth career-orientation initiative</div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="mobile-brand brand"><span class="brand-mark">✦</span> Career Compass <span class="ai-tag">AI</span></div>
+      <div class="auth-card">
+        <div class="auth-heading">
+          <p class="eyebrow" id="authEyebrow">WELCOME BACK</p>
+          <h2 id="authTitle">Sign in to your account</h2>
+          <p id="authSubtitle">Your next chapter starts here.</p>
+        </div>
+        <form id="authForm">
+          <div id="nameField" class="field hidden">
+            <label for="fullName">Full name</label>
+            <input id="fullName" type="text" placeholder="Enter your name" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" type="email" placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="At least 6 characters" required minlength="6" autocomplete="current-password">
+          </div>
+          <p id="authMessage" class="form-message" aria-live="polite"></p>
+          <button class="primary-btn full-btn" id="authSubmit" type="submit">Sign in <span>→</span></button>
+        </form>
+        <p class="switch-auth"><span id="switchText">Don't have an account?</span> <button id="switchAuth" type="button">Create one</button></p>
+        <div class="demo-note"><span>ⓘ</span> Demo project: account details stay in this browser only.</div>
+      </div>
+    </section>
+  </main>
+
+  <main id="appScreen" class="app-shell hidden">
+    <aside class="sidebar">
+      <a href="#" class="brand sidebar-brand"><span class="brand-mark">✦</span> Career Compass <span class="ai-tag">AI</span></a>
+      <p class="side-label">WORKSPACE</p>
+      <button class="nav-item active" data-page="overview"><span>▦</span> Overview</button>
+      <button class="nav-item" data-page="assessment"><span>◉</span> Career assessment</button>
+      <button class="nav-item" data-page="careers"><span>⌘</span> Explore careers</button>
+      <button class="nav-item" data-page="roadmap"><span>↗</span> My roadmap</button>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✦</div><strong>Your future is a journey.</strong><p>Small steps today can open big doors tomorrow.</p></div>
+        <div class="profile-row"><div class="avatar" id="userAvatar">U</div><div class="profile-info"><strong id="sidebarName">Student</strong><span id="sidebarEmail">student@example.com</span></div><button id="logoutBtn" class="logout-btn" title="Log out" aria-label="Log out">↪</button></div>
+      </div>
+    </aside>
+
+    <section class="main-area">
+      <header class="topbar"><div><span class="breadcrumb">Workspace</span><span class="crumb-divider">/</span><strong id="pageLabel">Overview</strong></div><div class="topbar-right"><span class="status-dot"></span> Your journey starts here <div class="top-avatar" id="topAvatar">U</div></div></header>
+      <div class="page-content">
+        <section class="page-view" id="overviewPage">
+          <div class="welcome-row"><div><p class="eyebrow">YOUR CAREER JOURNEY</p><h1>Hey, <span id="welcomeName">there</span> <span class="wave">✦</span></h1><p class="muted">Your future isn't one fixed path. Let's explore what fits you.</p></div><button class="primary-btn" data-go="assessment">Start assessment <span>→</span></button></div>
+          <div class="hero-card"><div class="hero-content"><span class="hero-chip">✦ YOUR PERSONAL CAREER GUIDE</span><h2>Big dreams begin<br>with <span>self-discovery.</span></h2><p>Answer a few quick questions and get career ideas matched to your interests.</p><button class="light-btn" data-go="assessment">Discover my path <span>→</span></button></div><div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="compass">✦<span>N</span></div><div class="floating-card card-one">↗ <span>Explore</span></div><div class="floating-card card-two">◎ <span>Grow</span></div></div></div>
+          <div class="section-heading"><div><h2>Your starting point</h2><p class="muted">A few steps to make your career plan clearer.</p></div></div>
+          <div class="quick-grid">
+            <button class="quick-card" data-go="assessment"><span class="quick-icon lilac">◉</span><span class="quick-title">Discover your strengths</span><span class="quick-description">Take a short interest assessment.</span><span class="quick-arrow">→</span></button>
+            <button class="quick-card" data-go="careers"><span class="quick-icon mint">⌘</span><span class="quick-title">Explore career options</span><span class="quick-description">Learn about different career paths.</span><span class="quick-arrow">→</span></button>
+            <button class="quick-card" data-go="roadmap"><span class="quick-icon peach">↗</span><span class="quick-title">Plan your next steps</span><span class="quick-description">Turn ideas into a learning roadmap.</span><span class="quick-arrow">→</span></button>
+          </div>
+          <div class="bottom-note"><span>✦</span><div><strong>Remember</strong><p>This assessment is a starting point, not a final decision. Your interests can change as you learn and grow.</p></div></div>
+        </section>
+
+        <section class="page-view hidden" id="assessmentPage">
+          <div class="page-intro"><p class="eyebrow">SELF-DISCOVERY</p><h1>Career interest assessment</h1><p class="muted">Choose what sounds most like you. There are no right or wrong answers.</p></div>
+          <div class="assessment-layout"><div class="assessment-card"><div class="progress-row"><span id="questionCounter">QUESTION 1 OF 6</span><span id="progressPercent">17%</span></div><div class="progress-track"><div id="progressFill"></div></div><h2 id="questionTitle">What kind of activity sounds most interesting?</h2><p id="questionHint" class="muted">Pick the option you would enjoy most.</p><div id="answerOptions" class="answer-options"></div><div class="assessment-controls"><button id="prevQuestion" class="secondary-btn" disabled>← Back</button><button id="nextQuestion" class="primary-btn" disabled>Next question →</button></div></div><aside class="tip-card"><div class="tip-star">✦</div><h3>Take your time</h3><p>Think about what you enjoy doing, not just what others expect you to choose.</p><div class="tip-line"></div><span>HONEST ANSWERS = BETTER INSIGHT</span></aside></div>
+          <div id="resultsPanel" class="results-panel hidden"></div>
+        </section>
+
+        <section class="page-view hidden" id="careersPage">
+          <div class="page-intro"><p class="eyebrow">EXPLORE POSSIBILITIES</p><h1>Career library</h1><p class="muted">Explore fields, learn what they involve, and find a path worth investigating.</p></div>
+          <div class="career-toolbar"><div class="search-box"><span>⌕</span><input id="careerSearch" type="search" placeholder="Search careers or skills..."></div><select id="careerCategory" aria-label="Filter career category"><option value="all">All fields</option><option value="Technology">Technology</option><option value="Creative">Creative</option><option value="Business">Business</option><option value="People">People & society</option><option value="Science">Science</option></select></div>
+          <div id="careerGrid" class="career-grid"></div>
+        </section>
+
+        <section class="page-view hidden" id="roadmapPage">
+          <div class="page-intro"><p class="eyebrow">YOUR NEXT STEPS</p><h1>My learning roadmap</h1><p class="muted">A simple plan you can adapt as you discover more about yourself.</p></div>
+          <div class="roadmap-header"><div><span class="roadmap-label">CURRENT FOCUS</span><h2 id="roadmapCareer">Explore your options</h2><p id="roadmapDescription">Complete the assessment to get a starting recommendation, or choose a career from the library.</p></div><button class="secondary-btn" data-go="careers">Choose a career ↗</button></div>
+          <div class="roadmap-list" id="roadmapList"></div>
+          <div class="bottom-note"><span>✦</span><div><strong>Make it your own</strong><p>Check course requirements and opportunities with trusted educators, career counsellors, and official education sources.</p></div></div>
+        </section>
+      </div>
+      <footer class="app-footer">Career Compass AI <span>•</span> Community Engagement Project — Career Orientation of Youth</footer>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
